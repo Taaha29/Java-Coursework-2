@@ -1,42 +1,38 @@
 public class ExpeditionMember {
+    // Private fields for member's name and student ID
     private String memberName;
     private String studentID;
 
     public static int member_counter = 0;
 
+    // Constructor to initialise fields and increment member_counter
     public ExpeditionMember(String memberName, String studentID) {
-        if (memberName == null || memberName.trim().isEmpty()) {
-            throw new IllegalArgumentException("Member Name cannot be empty");
-        }
-        this.memberName = memberName;
 
-        if (studentID == null || studentID.trim().isEmpty()) {
-            throw new IllegalArgumentException("Student ID cannot be empty");
-        }
+        this.memberName = memberName;
         this.studentID = studentID;
 
         member_counter++;
     }
 
+    // Getter for memberName
     public String getMemberName() {
         return memberName;
     }
 
+    // Setter for memberName
     public void setMemberName(String memberName) {
-        if (memberName == null || memberName.trim().isEmpty()) {
-            throw new IllegalArgumentException("Member name cannot be empty");
-        }
+
         this.memberName = memberName;
     }
 
+    // Getter for studentID
     public String getStudentID() {
         return studentID;
     }
 
+    // Setter for studentID
     public void setStudentID(String studentID) {
-        if (studentID == null || studentID.trim().isEmpty()) {
-            throw new IllegalArgumentException("Student ID cannot be empty");
-        }
+
         this.studentID = studentID;
     }
 }
